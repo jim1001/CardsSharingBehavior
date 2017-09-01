@@ -26,6 +26,9 @@ command InitializeApplication
   -- end if
 
   # Perform initialization operations every time application runs.
+  set the stackFiles of stack "twoCardUI" to card_behavior, levureAppFolder() & "/ui/twoCardUI/behaviors/card_behavior.livecodescript"
+  set the behavior of card "card1" of stack "twoCardUI" to the long id of stack "card_behavior"
+    set the behavior of card "card2" of stack "twoCardUI" to the long id of stack "card_behavior"
 
   return true
 end InitializeApplication
